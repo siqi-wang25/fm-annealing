@@ -29,6 +29,7 @@ $$
 L = L_0 + \frac{\lambda_S}{S^{\alpha_S}} + \frac{\lambda_N}{N^{\alpha_N}} + \lambda_M \cdot M
 $$
 
+
 used to predict optimal annealing strategies across model scales.
 
 ### ✔ **Robust Curve Fitting**
