@@ -14,22 +14,23 @@ This repository implements the key components introduced in our paper, including
 
 ### ✔ **Forward Effect**
 Computation of the cumulative *forward learning-rate effect*, characterized by the integral  
-\[
+$$
 S_1 = \int \eta(t) \, dt.
-\]
+$$
 
 ### ✔ **Annealing Momentum**
 A practical proxy for the *kinetic effect* of learning-rate decay, defined via a momentum-style update:
-\[
+$$
 S_2 = \sum_t \frac{m_t}{\sqrt{v_t}+\epsilon},
-\]
+$$
 capturing both the **rate** and **magnitude** of decay during annealing.
 
 ### ✔ **Forward–Momentum Scaling Law**
 A unified scaling formulation:
-\[
+$$
 L = L_0 + \frac{\lambda_S}{S^{\alpha_S}} + \frac{\lambda_N}{N^{\alpha_N}} + \lambda_M \cdot M
-\]
+$$
+
 used to predict optimal annealing strategies across model scales.
 
 ### ✔ **Robust Curve Fitting**
@@ -38,4 +39,30 @@ Robust Huber-loss optimization with L-BFGS-B for stable estimation of scaling pa
 ---
 
 ## 📂 Repository Contents
+annealing_scaling_law.py # Core implementation: S1, S2, scaling-law fitting
+README.md # Project description
+
+
+This code is intentionally minimal. It provides only the components required to reproduce the **annealing-related scaling behavior** discussed in the paper.
+
+---
+
+## ▶️ Usage
+
+```python
+from annealing_scaling_law import compute_S1, compute_S2, fit_and_evaluate_lr_mom
+
+S1 = compute_S1(steps, learning_rates)
+S2 = compute_S2(steps, learning_rates)
+
+y_fit, r2, mse, params = fit_and_evaluate_lr_mom(
+    y=loss_values,
+    x=S1,
+    t=S2,
+    n=model_size,
+    initial_params=[...]
+)
+```
+
+
 
