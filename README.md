@@ -27,8 +27,8 @@ Robust Huber-loss optimization with L-BFGS-B for stable estimation of scaling pa
 ---
 
 ## 📂 Repository Contents
-annealing_scaling_law.py
-README.md
+- annealing_scaling_law.py
+- README.md
 
 
 This code is intentionally minimal. It provides only the components required to reproduce the **annealing-related scaling behavior** discussed in the paper.
