@@ -63,5 +63,11 @@ y_fit, r2, mse, params = fit_and_evaluate_lr_mom(
 )
 ```
 
+> **📌 Repository Moved**
+> 
+> The official repository for this project is now maintained under the XMegaLab organization:
+> 👉 https://github.com/xmed-lab/fm-annealing
+> 
+> This repository will remain as a redirect for archival and citation purposes.
 
 
