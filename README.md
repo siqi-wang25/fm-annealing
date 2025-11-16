@@ -1,3 +1,11 @@
+> **📌 Repository Moved**
+> 
+> The official repository for this project is now maintained under the organization:
+> 👉 https://github.com/xmed-lab/fm-annealing
+> 
+> This repository will remain as a redirect for archival and citation purposes.
+
+
 # 📘 Forward–Momentum Scaling Law (AAAI 2026)
 
 This repository provides a minimal, self-contained reference implementation of the **Forward–Momentum Scaling Law** proposed in:
@@ -62,12 +70,5 @@ y_fit, r2, mse, params = fit_and_evaluate_lr_mom(
     initial_params=[...]
 )
 ```
-
-> **📌 Repository Moved**
-> 
-> The official repository for this project is now maintained under the XMegaLab organization:
-> 👉 https://github.com/xmed-lab/fm-annealing
-> 
-> This repository will remain as a redirect for archival and citation purposes.
 
 
